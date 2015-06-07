@@ -14,6 +14,9 @@
 		F28B6E6D1B23185200C34DD5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F28B6E6C1B23185200C34DD5 /* Images.xcassets */; };
 		F28B6E701B23185200C34DD5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F28B6E6E1B23185200C34DD5 /* LaunchScreen.xib */; };
 		F28B6E7C1B23185200C34DD5 /* CircleScratchCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28B6E7B1B23185200C34DD5 /* CircleScratchCardTests.swift */; };
+		F28B6E861B2318C200C34DD5 /* ScratchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28B6E851B2318C200C34DD5 /* ScratchView.swift */; };
+		F28B6E891B231BC200C34DD5 /* user_back_04.png in Resources */ = {isa = PBXBuildFile; fileRef = F28B6E871B231BC200C34DD5 /* user_back_04.png */; };
+		F28B6E8A1B231BC200C34DD5 /* user_back_05.png in Resources */ = {isa = PBXBuildFile; fileRef = F28B6E881B231BC200C34DD5 /* user_back_05.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		F28B6E751B23185200C34DD5 /* CircleScratchCardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircleScratchCardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28B6E7A1B23185200C34DD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F28B6E7B1B23185200C34DD5 /* CircleScratchCardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleScratchCardTests.swift; sourceTree = "<group>"; };
+		F28B6E851B2318C200C34DD5 /* ScratchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScratchView.swift; sourceTree = "<group>"; };
+		F28B6E871B231BC200C34DD5 /* user_back_04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_back_04.png; sourceTree = "<group>"; };
+		F28B6E881B231BC200C34DD5 /* user_back_05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_back_05.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,9 @@
 			children = (
 				F28B6E621B23185200C34DD5 /* AppDelegate.swift */,
 				F28B6E671B23185200C34DD5 /* ViewController.swift */,
+				F28B6E871B231BC200C34DD5 /* user_back_04.png */,
+				F28B6E881B231BC200C34DD5 /* user_back_05.png */,
+				F28B6E851B2318C200C34DD5 /* ScratchView.swift */,
 				F28B6E691B23185200C34DD5 /* Main.storyboard */,
 				F28B6E6C1B23185200C34DD5 /* Images.xcassets */,
 				F28B6E6E1B23185200C34DD5 /* LaunchScreen.xib */,
@@ -196,8 +205,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F28B6E6B1B23185200C34DD5 /* Main.storyboard in Resources */,
+				F28B6E891B231BC200C34DD5 /* user_back_04.png in Resources */,
 				F28B6E701B23185200C34DD5 /* LaunchScreen.xib in Resources */,
 				F28B6E6D1B23185200C34DD5 /* Images.xcassets in Resources */,
+				F28B6E8A1B231BC200C34DD5 /* user_back_05.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +229,7 @@
 				F28B6E681B23185200C34DD5 /* ViewController.swift in Sources */,
 				F28B6E661B23185200C34DD5 /* CircleScratchCard.xcdatamodeld in Sources */,
 				F28B6E631B23185200C34DD5 /* AppDelegate.swift in Sources */,
+				F28B6E861B2318C200C34DD5 /* ScratchView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

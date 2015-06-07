@@ -9,10 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var scratchView: ScratchView = ScratchView(frame: CGRectMake(0, 100, 375, 235))
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.scratchView.backgroundColor = UIColor.redColor()
+        
+        self.view.addSubview(self.scratchView)
     }
 
     override func didReceiveMemoryWarning() {
