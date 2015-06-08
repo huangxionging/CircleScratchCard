@@ -16,12 +16,12 @@ class ScratchView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.imageView.frame = bounds
+        self.imageView.frame = self.bounds
         self.imageView.image = UIImage(named: "user_back_04")
         self.addSubview(imageView)
 
-        self.maskImageView.frame = bounds
-        self.maskImageView.image = UIImage(named: "user_back_05")
+        self.maskImageView.frame = self.bounds
+        self.maskImageView.image = self.imageWithColorAndSize(UIColor.grayColor(), size: self.bounds.size)
         self.addSubview(maskImageView)
 
     }
@@ -106,6 +106,7 @@ class ScratchView: UIView {
         
     }
     
+    // 触摸开始事件
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         let touch: UITouch = touches.first as! UITouch
         
@@ -114,6 +115,7 @@ class ScratchView: UIView {
         self.drawImage(currentPoint)
     }
     
+    // 触摸移动
     override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
         let touch: UITouch = touches.first as! UITouch
         
@@ -123,8 +125,34 @@ class ScratchView: UIView {
         
     }
     
+    // 触摸结束
     override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
         
     }
 
+    // 重置刮刮卡视图
+    func resetScratchView(Void) ->Void {
+        self.maskImageView.image = 
+            self.imageWithColorAndSize(UIColor.grayColor(), size: self.bounds.size)
+    }
+    
+    // 依据指定颜色产生图片
+    func imageWithColorAndSize(color: UIColor, size: CGSize) ->UIImage {
+        
+        // 设置颜色空间
+        let colorSpace: CGColorSpaceRef = CGColorSpaceCreateDeviceRGB()
+        // 设置位图信息
+        let bitmapInfo: CGBitmapInfo = CGBitmapInfo(CGImageAlphaInfo.PremultipliedFirst.rawValue)
+        // 设备环境
+        let ctx: CGContextRef = CGBitmapContextCreate(nil, Int(size.width), Int(size.height), 8, Int(size.width) * 4, colorSpace, bitmapInfo)
+        // 设置填充颜色
+        CGContextSetFillColorWithColor(ctx, color.CGColor)
+        // 填充矩形
+        CGContextFillRect(ctx, CGRectMake(0, 0, size.width, size.height))
+        // 产生图片 CGImageRef
+        let imageRef: CGImageRef = CGBitmapContextCreateImage(ctx)
+        
+        // UI 图片
+        return UIImage(CGImage: imageRef)!
+    }
 }
